@@ -27,7 +27,7 @@ if __name__ == '__main__':
     default_values = [
         "KH/49633/12",
         "KH/59286/14",
-        "KH/83498/19"
+        "KH/83498/19",
         "KF/388383/19", # Wrong Number,
         "KF/345354/19", # Wrong Number,
         "KH/122290/26", # No Image
@@ -36,7 +36,7 @@ if __name__ == '__main__':
     list_filing_number = args.filing_numbers if args.filing_numbers else default_values
     
     try:
-        asyncio.run(main(filing_numbers=list_filing_number), debug=True)
+        asyncio.run(main(filing_numbers=list_filing_number))
         logger.info("Finish the scraping")
     except KeyboardInterrupt:
         logger.error("The process interrupted")
