@@ -98,6 +98,9 @@ Para verificar la imagen se hizo uso de la librería ```Pillow```, inicialmente 
 
 En ese caso se hizo uso de PlayWright tipo Headless, debido a que al ser una página SPA, se necesita renderizar para obtener el HTML, sin embargo, la página por detrás a partir de los query params, maneja los filtros encodeados para cargar el contenido, es por ello que es necesario obtener los filtros del paso anterior procesar la data y obtener esos parámetros encodeados. El parámetro ```afnb``` no debe ir encodeado, ya que genera problemas a la hora de renderizar la página.
 
+> [!IMPORTANT]
+> Otra consideracion es que cuando se realizan muchas peticiones desde una misma IP la pagina no carga, por lo tanto, es bueno implementar algun servicio de Proxy tipo Oxylab, SmartProxy, etc. 
+
 ## 3. Decisiones técnicas:
 
 ### 1. Uso de consultas HTTP:
